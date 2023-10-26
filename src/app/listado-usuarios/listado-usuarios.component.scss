@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.usuario:nth-child(even) {
+    background-color: #f2f2f2; 
+}

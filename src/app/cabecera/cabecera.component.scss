@@ -1,0 +1,37 @@
+header {
+    background-color: #007BFF;
+    color: #fff;
+    display: flex;
+    justify-content: space-between; /* Esto alinea los elementos a los extremos */
+    align-items: center; /* Esto centra verticalmente los elementos */
+    padding: 10px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Esto separa los elementos del margen izquierdo y derecho */
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+.login-button,
+.register-button {
+    
+    background-color: #141c6d;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.button-container {
+    display: flex;
+}
+a{
+    margin: 20px;
+}

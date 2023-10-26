@@ -1,0 +1,57 @@
+<div *ngIf="ok">
+<p class="aviso-importante" *ngIf="seVe">Cargando... </p>
+<ul>
+  <li *ngFor="let hamburguesa of hamburguesas">
+    <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">{{ hamburguesa.nombre }}</h3>
+          <p class="card-text">{{ hamburguesa.desc }}</p>
+          <p class="card-price">Precio :{{ hamburguesa.precio }} </p>
+          <button class="btn btn-primary" (click)="onButtonClick(hamburguesa)" >Comprar</button>
+        </div>
+      </div>
+    </li>
+</ul>
+<button class="btn btn-primary" (click)="cambioDeMenu()" >Confirmar Compra</button>
+</div>
+<div *ngIf="!ok"  class="payment-form">
+    <div class="payment-form">
+        <h2>Formulario de Pago de Hamburguesa</h2>
+        <form >
+          <div class="form-group">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="card-number">Número de Tarjeta:</label>
+            <input type="text" id="card-number" name="card-number" required>
+          </div>
+          <div class="form-group">
+            <label for="expiration">Fecha de Vencimiento:</label>
+            <input type="text" id="expiration" name="expiration" required>
+          </div>
+          <div class="form-group">
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required>
+          </div>
+          <button type="submit">Realizar Pago</button>
+          <div class="mensaje">
+            <p>Tiene 10 minutos para realizar la compra Desde : </p>
+            {{horasTRING}}
+        </div>
+        </form>
+      </div>
+      <ul>
+        <li *ngFor="let hamburguesa of carritohamburguesas">
+          <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">{{ hamburguesa.nombre }}</h3>
+                <p class="card-text">{{ hamburguesa.desc }}</p>
+                <p class="card-price">Precio :{{ hamburguesa.precio }} </p>
+              </div>
+            </div>
+          </li>
+      </ul>
+</div>
+
+    
